@@ -8,7 +8,12 @@
 Frontend часть будет на адресе: http://localhost:5173/
 ## Стек технологий:
 
-bash
+1. bash
+2. docker
+3. docker compose
+
+Всё обернуто в докер
+
 * Backend
     + Python
     + FastAPI
