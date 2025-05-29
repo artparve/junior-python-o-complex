@@ -1,0 +1,20 @@
+# Базовый образ с Node.js для разработки
+FROM node:20-alpine
+
+# Установка рабочей директории
+WORKDIR /app
+
+# Копируем зависимости
+COPY package*.json ./
+
+# Устанавливаем зависимости
+RUN npm install
+
+# Копируем исходный код
+COPY . .
+
+# Экспонируем порт Vite
+EXPOSE 5173
+
+# Запуск dev-сервера с hot reload
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
